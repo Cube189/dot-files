@@ -1,0 +1,12 @@
+*~
+.DS_Store
+.localized
+.idea/
+*.class
+playground.scala
+*.iml
+node_modules
+target
+*.log
+ConstMgmtDb
+.project
