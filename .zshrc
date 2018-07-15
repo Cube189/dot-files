@@ -25,6 +25,8 @@ bindkey '^[[1;9D' backward-word
 
 
 ### EXPORTS
+export DOCKER_HOST="tcp://0.0.0.0:2375"
+export PROJECTS="${HOME}/Documents/projects"
 export VIMPLUGINS="${HOME}/.config/nvim/init.vim"
 
 ### ALIASES
@@ -50,6 +52,16 @@ calc () {
 
 function cs {
     builtin cd "$@" && ls -a
+}
+
+function lg () {
+	if [[ $# -eq 2 ]]; then
+		ls -1 $1 | grep $2
+	elif [[ $1 ]]; then
+		ls -a1 | grep $1
+	else
+		ls -a1
+	fi
 }
 
 
